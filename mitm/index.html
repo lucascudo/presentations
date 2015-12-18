@@ -1,0 +1,287 @@
+<!doctype html>
+<!--
+
+    Welcome to the the source, young padawan.
+
+    One step closer to learn something interesting you are...
+
+                               ____                  
+                            _.' :  `._               
+                        .-.'`.  ;   .'`.-.           
+               __      / : ___\ ;  /___ ; \      __  
+             ,'_ ""=-.:__;".-.";: :".-.":__;.-="" _`,
+             :' `.t""=-.. '<@.`;_  ',@:` ..-=""j.' `;
+                  `:-.._J '-.-'L__ `-.-' L_..-;'     
+                    "-.__ ;  .-"  "-.  : __.-"       
+                        L ' /.======.\ ' J           
+                         "-.   "__"   .-"            
+                        __.l"-:_JL_;-";.__           
+                     .-j/'.;  ;""""  / .'\"-.        
+                   .' /:`. "-.:     .-" .';  `.      
+                .-"  / ;  "-. "-..-" .-"  :    "-.   
+             .+"-.  : :      "-.__.-"      ;-._   \  
+             ; \  `.; ;                    : : "+. ; 
+             :  ;   ; ;                    : ;  : \: 
+             ;  :   ; :                    ;:   ;  : 
+            : \  ;  :  ;                  : ;  /  :: 
+            ;  ; :   ; :                  ;   :   ;: 
+            :  :  ;  :  ;                : :  ;  : ; 
+            ;\    :   ; :                ; ;     ; ; 
+            : `."-;   :  ;              :  ;    /  ; 
+             ;    -:   ; :              ;  : .-"   : 
+             :\     \  :  ;            : \.-"      : 
+              ;`.    \  ; :            ;.'_..-=  / ; 
+              :  "-.  "-:  ;          :/."      .'  :
+               \         \ :          ;/  __        :
+                \       .-`.\        /t-""  ":-+.   :
+                 `.  .-"    `l    __/ /`. :  ; ; \  ;
+                   \   .-" .-"-.-"  .' .'j \  /   ;/ 
+                    \ / .-"   /.     .'.' ;_:'    ;  
+                     :-""-.`./-.'     /    `.___.'   
+                           \ `t  ._  /               
+                            "-.t-._:'                
+
+-->
+<html lang="pt-br">
+	<head>
+	    <meta charset="utf-8" />
+	    <meta name="viewport" content="width=1024" />
+	    <meta name="apple-mobile-web-app-capable" content="yes" />
+	    <title>Quem abriu minha correspondência?</title>
+	    <meta name="author" content="Lucas Teixeira Rocha"/>
+	    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+	    <link href="css/impress-demo.css" rel="stylesheet" />
+	</head>
+
+	<body class="impress-not-supported">
+		<div id="jmpress">
+			<div id="home" class="step slide" data-x="-1500">
+				<h1>Quem abriu minha correspondência?</h1>
+				<br>
+				<p style="float:right;">Por Lucas Teixeira Rocha</p>
+				<br>
+				<p style="float:right; padding-right: 30%;"><img src="img/vampeta.gif"></p>
+			</div>
+
+			<div id="arp" class="step slide">
+				<h1>MAC is just my "NIC"</h1>
+				<p>ARP é simples e não tem autenticação.</p>
+				<br>
+				<p>
+					<table cellpadding="5" cellspacing="1" bgcolor="#cccccc" border="1">
+						<thead>
+							<tr valign="top" bgcolor="#ffffff">
+							    <th>From:<br>(Alice's MAC address)</th>
+							    <th>To:<br>(Broadcast address)</th>
+							    <th>Packet Content</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr valign="top" bgcolor="#ffffff">
+							    <td>00:A0:24:30:2E:13</td>
+							    <td>FF:FF:FF:FF:FF:FF</td>
+							    <td>Who has 192.168.39.148?<br>Tell 192.168.39.101.</td>
+							</tr>
+						</tbody>
+					</table>
+					<br><br>
+					<table cellpadding="5" cellspacing="1" bgcolor="#cccccc" border="1">
+						<thead>
+							<tr valign="top" bgcolor="#ffffff">
+								<th>From:<br>(Bob's MAC address)</th>
+								<th>To:<br>(Alice's MAC address)</th>
+							    <th>Packet Content</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr valign="top" bgcolor="#ffffff">
+								<td>00:A0:24:30:4C:23</td>
+								<td>00:A0:24:30:2E:13</td>
+								<td>I have 192.168.39.148</td>
+							</tr>
+						</tbody>
+					</table>
+				</p>
+			</div>
+
+			<div id="everyHackerLies" class="step slide" data-x="1500">
+				<h1>Every hacker* lies</h1>
+				<br>
+				<p>- O que chamamos de "engenharia social" nada mais é do que a arte de mentir para pessoas.</p>
+				<br>
+				<p>- Mentir para máquinas envolve diversas técnicas, hoje falaremos sobre o ARP Cache Poisoning.</p>
+			</div>
+
+	      	<div id="streetView" class="step" data-x="5000" data-next="#casa1"></div>
+	      	<div id="casa0" class="step" data-x="4000" data-z="-2000">
+	        	<h1></h1><h1></h1>
+		        <p><img class="house" src="img/house_blue.jpg"></p>
+			</div>
+			<div id="casa1" class="step" data-x="5000" data-z="-2000" data-prev="#streetView" data-next="#hackerStreetView">
+				<h1></h1><h1></h1>
+				<p><img class="house" src="img/house_grey.jpg"></p>
+			</div>
+			<div id="casa2" class="step" data-x="6000" data-z="-2000">
+				<h1></h1><h1></h1>
+				<p><img class="house" src="img/house_brown.jpg"></p>
+			</div>
+			<div id="hackerStreetView" class="step" data-x="5000" data-prev="#casa1"></div>
+				
+			<div id="arrrrp" class="step slide" data-x="10000">
+				<h1>Pirates pronounce it, "ARrrrrrrrP!"</h1>
+				<p><img src="img/arp_poisoning.png"></p>
+				<p>- Denial of Service</p>
+				<p>- MAC Flooding</p>
+				<p>- Man in The Middle</p>
+			</div>
+
+			<div id="osi" class="step" data-x="20000" data-y="11000" data-z="-1500" data-rotate-x="-90">
+				<h1>OSI model</h1>
+			</div>
+			<div id="layer1" class="step slide" data-x="20000" data-z="-6000" data-next="#layer3">
+				<h1>Physical</h1>
+				<p><img src="img/mitm_layer1.png"></p>
+			</div>
+			<div id="layer2" class="step slide" data-x="20000" data-z="-5000" data-y="1000">
+				<h1>Data link</h1>
+			</div>
+			<div id="layer3" class="step slide" data-x="20000" data-z="-4000" data-y="2000" data-next="#layer7" data-prev="#layer1">
+				<h1>Network</h1>
+				<p><img src="img/mitm_layer3.png"></p>
+			</div>
+			<div id="layer4" class="step slide" data-x="20000" data-z="-3000" data-y="3000">
+				<h1>Transport</h1>
+			</div>
+			<div id="layer5" class="step slide" data-x="20000" data-z="-2000" data-y="4000">
+				<h1>Session</h1>
+			</div>
+			<div id="layer6" class="step slide" data-x="20000" data-z="-1000" data-y="5000">
+				<h1>Presentation</h1>
+			</div>
+			<div id="layer7" class="step slide" data-x="20000" data-y="6000" data-prev="#layer3">
+				<h1>Application</h1>
+				<p>
+					<img src="img/mitm_layer7.jpg">
+					<img src="img/mitm_layer7_ssh.gif" style="background-color: white;">
+				</p>
+			</div>
+
+			<div id="mitm0" class="step slide" data-x="30000">
+				<h1>mitmproxy</h1>
+				<p><img src="img/mitmproxy.png"></p>
+			</div>
+
+			<div id="mitm1" class="step slide" data-x="31500">
+				<h1>mitmproxy</h1>
+				<p><img src="img/mitmproxy-kveditor.png"></p>
+			</div>
+
+			<div id="jack0" class="step slide" data-x="33000">
+				<h1>Jack The Stripper</h1>
+				<p><img src="img/screenshotSetup.png"></p>
+			</div>
+			<div id="jack1" class="step slide" data-x="34500">
+				<h1>Jack The Stripper</h1>
+				<p><img src="img/screenshotRemoteBrowser.png"></p>
+			</div>
+			<div id="jack2" class="step slide" data-x="36000">
+				<h1>Jack The Stripper</h1>
+				<p><img src="img/screenshotSslstrip.png"></p>
+			</div>
+			<div id="jack3" class="step slide" data-x="37500">
+				<h1>Ettercap e SSLStrip</h1>
+				<p><img src="img/screenshotJackSource.png"></p>
+			</div>
+
+			<div id="wireshark" class="step slide" data-x="39000">
+				<h1>Wireshark</h1>
+				<p><img src="img/screenshotWireshark.png"></p>
+			</div>
+			
+			<div id='theCure0' class="step slide" data-x="50000">
+				<h1>Proteja-se</h1>
+				<br>
+				<p>- Evite redes públicas ou desconhecidas</p>
+				<br>
+				<p>- Não se esqueça de verificar se o cadeado está fechado.</p>
+				<br>
+				<p>- Utilize two factor authentication.</p>
+				<br>
+				<p>- Utilize VPN.</p>
+				<br>
+				<p>- Utilize navegadores seguros e atualizados.</p>
+			</div>
+			<div id='theCure1' class="step slide" data-x="51500">
+				<h1>Proteja sua rede</h1>
+				<br>
+				<p>- IP`s e tabelas ARP estáticas.</p>
+				<br>
+				<p>- Ative "One Port Security" no switches que ofereçam suporte a esta funcionalidade.</p>
+				<br>
+				<p>- Utilize um IDS como Snort, ARPwatch ou ArpON para monitorar e emitir alertas sobre comunicações ARP incomuns.</p>
+			</div>
+			<div id='theCure2' class="step slide" data-x="53000">
+				<h1>Proteja seus clientes</h1>
+				<br>
+				<p>- Não ofereça logins em páginas sem SSL.</p>
+				<br>
+				<p>- Ofereça two factor authentication.</p>
+				<br>
+				<p>- Instale risk-based authentication em background para detectar anomalias no uso das contas.</p>
+				<br>
+				<p>- Não inclua links em e-mails para clientes e encorage-os a sempre baixar a versão mais nova do navegador de sua prefência.</p>
+			</div>
+
+			<div id='theCure3' class="step slide" data-x="54500">
+				<h1>Vigiai e orai</h1>
+				<br>
+				<p><img src="img/oracao_pc.png"><img src="img/snort.png"></p>
+				<br>
+				<p>“The cruelest lies are often told in silence.”, Robert Louis Stevenson.</p>
+			</div>
+
+			<div id="source" class="step slide" data-x="56000" data-y="0">
+				<h2>Use the <b>Source</b>, Luke!</h2>
+				<br/>
+				<p>http://arppoisoning.com</p>
+				<p>http://hackerspace.lifehacker.com</p>
+				<p>http://jaringankita.com</p>
+				<p>http://linuxfocus.org</p>
+				<p>http://lucas.redeaberta.com.br</p>
+				<p>http://mitmproxy.org</p>
+				<p>http://net-security.org</p>
+				<p>http://sourceforge.net/p/jackthestripper</p>
+				<p>http://watchguard.com</p>
+				<p>https://www.cl.cam.ac.uk/~rja14/Papers/Man-in-the-Middle-Defence.pdf</p>
+			<div>
+		</div>
+
+	    <script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/jmpress.min.js"></script>
+		<script>
+			function enderecaCasas(names, numbers) {
+				for (var i = 0; i <= 2; i++) {
+					$("#casa" + i + " h1:eq(0)").html(names[i]);
+					$("#casa" + i + " h1:eq(1)").html("Casa " + numbers[i]);
+				}
+			}
+			$(document).ready(function(){
+				$("#jmpress").jmpress({
+					animation: {
+				        transformOrigin: 'center center', // Point on which to transform (unused)
+				        transitionDuration: '3s',         // Length of animation
+				        transitionDelay: '300ms',         // Delay before animating
+				        transitionTimingFunction: 'ease'  // Animation effect
+				    },
+				    transitionDuration: 3000
+				});
+				$('#streetView').on('enterStep', function(){
+					enderecaCasas([ "Bob", "Vampeta", "Alice" ], ["0", "1", "2"]);
+				});
+				$('#hackerStreetView').on('enterStep', function(){
+					enderecaCasas( ["X", "Bob/Alice", "X" ], ["X", "0/2", "X"]);
+				});
+			});
+		</script>
+	</body>
+</html>
