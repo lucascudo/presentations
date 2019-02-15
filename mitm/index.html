@@ -54,7 +54,7 @@
 	</head>
 
 	<body class="impress-not-supported">
-		<div id="jmpress">
+		<div id="impress">
 			<div id="home" class="step slide" data-x="-1500">
 				<h1>Quem abriu minha correspondência?</h1>
 				<br>
@@ -63,7 +63,7 @@
 				<p style="float:right; padding-right: 30%;"><img src="img/vampeta.gif"></p>
 			</div>
 
-			<div id="arp" class="step slide">
+			<div id="arp" class="step slide" data-x="0">
 				<h1>MAC is just my "NIC"</h1>
 				<p>ARP é simples e não tem autenticação.</p>
 				<br>
@@ -125,7 +125,7 @@
 				<h1></h1><h1></h1>
 				<p><img class="house" src="img/house_brown.jpg"></p>
 			</div>
-			<div id="hackerStreetView" class="step" data-x="5000" data-prev="#casa1"></div>
+			<div id="hackerStreetView" class="step" data-x="5000" data-z="0" data-prev="#casa1"></div>
 				
 			<div id="arrrrp" class="step slide" data-x="10000">
 				<h1>Pirates pronounce it, "ARrrrrrrrP!"</h1>
@@ -216,7 +216,7 @@
 				<br>
 				<p>- IP`s e tabelas ARP estáticas.</p>
 				<br>
-				<p>- Ative "One Port Security" no switches que ofereçam suporte a esta funcionalidade.</p>
+				<p>- Ative "Port Security" nos switches que ofereçam suporte a esta funcionalidade.</p>
 				<br>
 				<p>- Utilize um IDS como Snort, ARPwatch ou ArpON para monitorar e emitir alertas sobre comunicações ARP incomuns.</p>
 			</div>
@@ -257,28 +257,21 @@
 		</div>
 
 	    <script src="js/jquery-1.11.1.min.js"></script>
-		<script src="js/jmpress.min.js"></script>
+		<script src="js/impress.js"></script>
 		<script>
 			function enderecaCasas(names, numbers) {
+				console.log('teste');
 				for (var i = 0; i <= 2; i++) {
 					$("#casa" + i + " h1:eq(0)").html(names[i]);
 					$("#casa" + i + " h1:eq(1)").html("Casa " + numbers[i]);
 				}
 			}
 			$(document).ready(function(){
-				$("#jmpress").jmpress({
-					animation: {
-				        transformOrigin: 'center center', // Point on which to transform (unused)
-				        transitionDuration: '3s',         // Length of animation
-				        transitionDelay: '300ms',         // Delay before animating
-				        transitionTimingFunction: 'ease'  // Animation effect
-				    },
-				    transitionDuration: 3000
-				});
-				$('#streetView').on('enterStep', function(){
+				impress().init();
+				$('#streetView').on('impress:stepenter', function(){
 					enderecaCasas([ "Bob", "Vampeta", "Alice" ], ["0", "1", "2"]);
 				});
-				$('#hackerStreetView').on('enterStep', function(){
+				$('#hackerStreetView').on('impress:stepenter', function(){
 					enderecaCasas( ["X", "Bob/Alice", "X" ], ["X", "0/2", "X"]);
 				});
 			});
